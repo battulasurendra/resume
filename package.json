@@ -1,0 +1,29 @@
+{
+    "name": "resume",
+    "version": "0.0.1",
+    "description": "Personal resume template",
+    "main": "index.html",
+    "scripts": {
+        "test": "npm test",
+        "scss" : "sass --watch assets/scss/styles.scss:assets/css/styles.min.css --style compressed"
+    },
+    "repository": {
+        "type": "git",
+        "url": "gitnpo+https://github.com/battulasurendra/resume.git"
+    },
+    "keywords": [
+        "UI Developer",
+        "Web Developer",
+        "UI Engineer",
+        "Front-end Developer"
+    ],
+    "author": "Surendra B",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/battulasurendra/resume/issues"
+    },
+    "homepage": "https://github.com/battulasurendra/resume#readme",
+    "dependencies": {
+        "bootstrap": "^5.0.0-alpha1"
+    }
+}

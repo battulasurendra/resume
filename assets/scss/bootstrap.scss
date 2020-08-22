@@ -1,0 +1,192 @@
+$primary: $color1;
+$secondary: $color2;
+
+// Global variables
+$enable-caret: false;
+$enable-shadows: false;
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// body
+$font-family-base: $font-family1;
+$font-weight-base: 300;
+$line-height-base: 1.3;
+$body-color: $black;
+
+// common values
+$link-decoration: none;
+$link-hover-color: initial;
+$link-color: $primary;
+
+$dropdown-color: inherit;
+$dropdown-link-hover-color: inherit;
+$dropdown-link-hover-bg: $gray-200;
+$dropdown-link-active-color: $dropdown-link-hover-color;
+$dropdown-link-active-bg: $dropdown-link-hover-bg;
+
+// Padding and margin sets
+$spacers: () !default;
+$spacers: map-merge(
+    $spacers,
+    (
+        0: 0,
+        1: $spacer / 2,
+        2: $spacer,
+        3: $spacer * 1.5,
+        4: $spacer * 2,
+        5: $spacer * 2.5,
+        6: $spacer * 3,
+        7: $spacer * 3.5,
+        8: $spacer * 4,
+        9: $spacer * 4.5,
+        10: $spacer * 5,
+    )
+);
+
+// Color sets - text, background
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $color3,
+    "quaternary": $color4,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900,
+    "black": $black,
+);
+
+// Font sizes 28px - 12px
+$display-font-sizes: (
+    1: $font-size-base * 1.75,
+    2: $font-size-base * 1.5,
+    3: $font-size-base * 1.25,
+    4: $font-size-base * 1,
+    5: $font-size-base * 0.875,
+    6: $font-size-base * 0.75,
+);
+
+$display-font-weight: 400;
+$display-line-height: 1.5;
+
+// heading font sizes 44px - 16px, margin and font weight
+$h1-font-size: $font-size-base * 2.75;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$headings-margin-bottom: 0;
+$headings-font-weight: 600;
+
+// list
+$list-group-bg: transparent;
+$list-group-item-padding-y: 0.3rem;
+$list-group-item-padding-x: 0.75rem;
+$list-group-border-width: 0;
+
+// header
+$navbar-nav-link-padding-x: 1rem;
+$nav-link-padding-x: 1rem;
+
+// buttons
+$btn-font-size: 0.85rem;
+$btn-font-weight: 600;
+$btn-line-height: 20px;
+$btn-white-space: nowrap;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.25rem;
+$btn-border-radius: 0;
+$btn-border-width: 1px;
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+
+// form controls
+$input-font-size: map-get($display-font-sizes, 5);
+$input-font-size-sm: map-get($display-font-sizes, 6);
+$input-font-size-lg: $input-font-size;
+
+$input-font-weight: 400;
+$input-color: $gray-900;
+
+$input-height: 38px;
+$input-height-sm: 32px;
+$input-height-lg: 42px;
+
+$input-box-shadow: none;
+$input-focus-box-shadow: $input-box-shadow;
+
+$input-border-color: $gray-500;
+$input-focus-border-color: $primary;
+
+$form-select-font-size: $input-font-size;
+$form-select-box-shadow: $input-box-shadow;
+$form-select-focus-box-shadow: $input-focus-box-shadow;
+$form-select-border-radius: 2px;
+$form-select-focus-border-color: $primary;
+
+$utilities: () !default;
+$utilities: map-merge(
+    (
+        "font-weight": (
+            property: font-weight,
+            class: fw,
+            values: $fw-util-set,
+        ),
+        "width": (
+            property: width,
+            class: w,
+            responsive: true,
+            values:
+                map-merge(
+                    (
+                        auto: auto,
+                    ),
+                    $width-util-set
+                ),
+        ),
+        "border-right": (
+            property: border-right,
+            responsive: true,
+            values: (
+                null: $border-width solid $border-color,
+                0: 0,
+            ),
+        ),
+        "text-decoration": (
+            property: text-decoration,
+            class: td,
+            values: (
+                none: none,
+                u: underline 
+            )
+        )
+    ),
+    $utilities
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/****************** Bootstrap overrides ******************/
+body {
+    @include font-size($font-size-base * 0.875);
+}
+/****************** Bootstrap overrides ******************/
+/****************** Bootstrap additions ******************/
+[class*="display-"] {
+    letter-spacing: 0.3px;
+}
+/****************** Bootstrap additions ******************/

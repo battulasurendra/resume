@@ -1,0 +1,195 @@
+/****************** Global ******************/
+html {    
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+* {
+    outline: none !important;
+    text-decoration: none;
+    box-sizing: border-box !important;
+
+    &:focus {
+        outline: none !important;
+        text-decoration: none;
+        box-sizing: border-box !important;
+    }
+
+    &:active {
+        outline: none !important;
+        text-decoration: none;
+        box-sizing: border-box !important;
+    }
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+
+    &:focus {
+        cursor: pointer;
+        color: inherit;
+    }
+
+    &:active {
+        cursor: pointer;
+        color: inherit;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+i {
+    font-style: italic;
+}
+
+section {
+    padding: 70px 0;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    overflow: hidden;
+}
+
+ol,
+ul,
+dl {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+b {
+    font-weight: bold;
+}
+
+strong {
+    font-weight: 800;
+}
+/****************** Global ******************/
+/****************** Browser Override ******************/
+address {
+    font-style: normal;
+}
+/****************** Browser Override ******************/
+/****************** Scrollbar designs ******************/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px $gray-500;
+    -webkit-box-shadow: inset 0 0 6px $gray-500;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    box-shadow: inset 0 0 1000px $gray-800;
+    -webkit-box-shadow: inset 0 0 1000px $gray-800;
+}
+/****************** Scrollbar designs ******************/
+/****************** Sprite styles ******************/
+@include generateSprite("../images/sprite-icons.svg", 3, 19);
+// @include generateBrandSprite("../images/sprite-client-logos.png", 'client', 2, 30, 200);
+/****************** Sprite styles ******************/
+/****************** Form styles ******************/
+/****************** Form styles ******************/
+/****************** Button styles ******************/
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+    color: $white;
+    position: relative;
+    background-color: transparent !important;
+    box-shadow: inset 0 0 0 2em $primary;
+    border-color: $primary;
+
+    &:active,
+    &:hover,
+    &:focus {
+        color: $primary;
+        box-shadow: none;
+    }
+
+    &.btn-naked{
+        color: $primary;
+        padding:0;
+        border: none;
+        box-shadow: none;
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $primary;
+            border: none;
+            box-shadow: none;
+        }    
+    }
+
+    &.btn-naked-blue{
+        color: $primary;
+        border-color: transparent;
+        box-shadow: none;
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $primary;
+            border-color: transparent;
+            box-shadow: none;
+        }
+        
+    }
+}
+/****************** Button styles ******************/
+/****************** Image Dispaly styles ******************/
+.i-inline {
+    width: auto;
+    height: auto;
+    min-height: auto;
+    min-width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.i-fit {
+    width: 100%;
+    height: 100%;
+    min-height: auto;
+    min-width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.i-cover {
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: none;
+    max-height: none;
+}
+/****************** Image Dispaly styles ******************/
+/************************************ Media queries(Mobile & Tablet) ************************************/
+@media only screen and (max-width: 991px) {
+}
+/************************************ Media queries(Mobile & Tablet) ************************************/
