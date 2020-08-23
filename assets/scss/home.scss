@@ -1,5 +1,9 @@
 
 
-.inner-container {
-    overflow-y: auto;
+.inner-container{
+    margin-right: -15px;
+    
+    .content-container{
+        overflow-y: auto;
+    }
 }
